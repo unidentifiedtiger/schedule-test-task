@@ -1,0 +1,39 @@
+{
+  "name": "schedule-app",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun run --parallel --filter './apps/*' dev",
+    "build": "bun run --filter '@app/*' build",
+    "lint": "bun run --filter '@app/*' lint",
+    "typecheck": "bun run --filter '@app/*' typecheck",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:generate": "bun run --cwd apps/api db:generate",
+    "db:migrate": "bun run --cwd apps/api db:migrate",
+    "db:push": "bun run --cwd apps/api db:push",
+    "db:studio": "bun run --cwd apps/api db:studio",
+    "db:seed": "bun run --cwd apps/api db:seed",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "docker:up": "docker compose --profile app up --build -d",
+    "docker:down": "docker compose --profile app down",
+    "docker:logs": "docker compose --profile app logs -f"
+  },
+  "packageManager": "bun@1.4.4",
+  "trustedDependencies": [
+    "sharp",
+    "unrs-resolver"
+  ],
+  "dependencies": {
+    "@tanstack/react-query": "^5.108.2",
+    "lucide-react": "^1.77.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.10.1",
+    "prettier-plugin-tailwindcss": "^0.8.1"
+  }
+}

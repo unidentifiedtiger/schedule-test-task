@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* Approximate tokens taken from the PDF; replace with exact values from Figma Inspect. */
+@theme {
+  --color-app: #f1f3f8;
+  --color-primary: #5b7ef0;
+  --color-primary-soft: #e8edfc;
+  --color-ink: #1c1d21;
+  --color-muted: #8b8e97;
+  --color-line: #dcdde2;
+  --color-stripe: #f7f7f8;
+  --color-danger: #e5484d;
+  --color-danger-bg: #fbe4e4;
+  --color-shift-morning: #dfe7ff;
+  --color-shift-morning-edge: #6c8cff;
+  --color-shift-morning-ink: #4a6ae0;
+  --color-shift-day: #ece3fb;
+  --color-shift-day-edge: #a885ec;
+  --color-shift-day-ink: #7a45df;
+  --color-shift-evening: #d9f2ef;
+  --color-shift-evening-edge: #4cc3b6;
+  --color-shift-evening-ink: #0f9f8f;
+  --color-shift-custom-edge: #9a9fb0;
+}
+
+body {
+  background: var(--color-app);
+  color: var(--color-ink);
+}

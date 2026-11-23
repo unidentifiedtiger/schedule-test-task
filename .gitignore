@@ -1,0 +1,23 @@
+# dependencies
+node_modules
+
+# build output
+.next
+out
+dist
+*.tsbuildinfo
+next-env.d.ts
+
+# env files: ignore real ones, keep the examples
+.env
+.env.*
+!.env.example
+
+# logs and OS files
+*.log
+.DS_Store
+
+# editor: keep the shared settings file
+.vscode/*
+!.vscode/settings.json
+.idea
